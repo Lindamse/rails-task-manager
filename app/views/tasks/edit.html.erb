@@ -1,0 +1,14 @@
+<%= form_for(@task) do |f| %>
+  <div class="form-group">
+  <%= f.label :title %>
+  <%= f.text_field :title , placeholder: "title", class: 'form-control'%>
+   </div>
+  <div class="form-group">
+  <%= f.label :details %>
+  <%= f.text_field :details, placeholder: "details", class: 'form-control' %>
+ </div>
+  <%= f.check_box :completed %>
+  <%= f.submit class: 'btn btn-primary'%>
+<% end %>
+<p><i class="fas fa-undo"></i>
+  <%= link_to "Back to list", tasks_path %>/<p>
